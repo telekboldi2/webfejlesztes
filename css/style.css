@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+
+* {
+    box-sizing: border-box;
+}
+
+.egg{
+    filter: invert(100%);
+}
+
+#bold{
+    font-weight: bold;
+}
+
+
+body {
+    background-color: #fafafa;
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+h1, h2, h3, h4{
+    font-family: "Open Sans";
+}
+
+h3{
+    font-size: 4vw;
+}
+
+
+h1{
+    font-size: 6vw;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+header{
+    display:inline-flex;
+    padding: 10px;
+    color: white;
+    margin: 0;
+    flex: 1 1 100%;
+    float: left;
+    justify-content: space-between;
+}
+#logo{
+    align-self: center;
+    filter: invert(0%);
+    cursor: pointer;
+}
+
+#logo img{
+    width: 16vw;
+    height: 16vw;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.svgedit{
+    filter: invert(100%);
+}
+
+
+
+#logo img{
+    height: 4em;
+}
+
+/* 
+NAVIGATION
+*/
+nav{
+    padding: 0px;
+    margin: 0px;
+    flex: 1 1 100%;
+    background-color: black;
+}
+
+nav ul
+{
+    display:flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    justify-content: space-around;
+}
+
+nav li
+{
+    font-family: "Open Sans";
+    float: left;
+    font-size: 4vw;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0 10px 10px;
+}
+
+nav a:link, a:visited{
+    text-decoration: none;
+    color:white;
+    padding: 10px 5px 10px 5px;
+}
+
+nav a:hover{
+    background-color: white;
+    color:black;
+    border-radius: 10px;
+    text-shadow: 0 0 5px black;
+}
+
+nav a.active{
+    text-shadow: 0 0 5px white;
+}
+
+nav a.active:hover{
+    text-shadow: 0 0 13px rgb(196, 175, 175);
+}
+
+nav a.active:hover{
+    color:white;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/*
+ARTICLE, FLIPCARDS, ABOUT US ASIDE AND PICTURES
+*/
+
+article{
+    flex: 1 1 100%;
+    background-color: black;
+    padding: 0 20px 2px 20px;
+    border-radius: 10px;
+    margin: 5% 1% 1% 1%;
+    color:white;
+    font-family: "PT Sans Narrow";
+}
+
+article,section h3{
+    font-family: "Open Sans";
+    text-align: center;
+}
+
+aside{
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+
+aside img{
+    flex-direction: column;
+    border-radius: 5px; 
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section{
+    background-color: black;
+    flex: 1 1 100%;
+    padding: 0 20px 0px 20px;
+    border-radius: 5px;
+    color:white;
+    font-family: "PT Sans Narrow";
+}
+
+/*
+FLIPCARDS
+*/
+
+.flip, .flipx{
+    margin: 10% 1% 7% 1%;
+    perspective: 1000px;
+    background-color: transparent;
+}
+
+.frontbg{
+    width: 100%;
+    height: 100%;
+    position: inherit;
+    background-size: cover;
+    filter:blur(5px);
+    z-index: -1;
+}
+
+#esbg{
+    background-image: url(../images/pexels-caleb-oquendo-esbg.jpg);
+
+}
+#pebg{
+    background-image: url(../images/pexels-gul-isik-pebg.jpg);
+
+}
+#dvbg{
+    background-image: url(../images/pexels-imad-clicks-10196036_2.jpg);
+
+}
+
+.inside{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip:hover > .inside{
+    transform: rotatey(180deg);
+}
+
+.flipx:hover > .inside{
+    transform: rotatex(180deg);
+}
+
+
+.front, .back, .backx{
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.front{
+    position: absolute; 
+}
+
+.front h3{
+    font-size: 7vw;
+    color: White;
+    text-shadow: 1px 1px red;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.back{
+    transform: rotatey(180deg);
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+
+.backx{
+    transform: rotatex(180deg);
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+
+.back p{
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+img{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#defqon{
+    border: 4px solid white;
+    border-style:dashed dotted solid ridge;
+}
+
+/*
+FOOTER
+*/
+
+footer{
+    display:flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color:white;
+    padding: 20px;
+}
+
+#icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#icons img{
+    margin: 0;
+    width: 7vw;
+    height: 7vw;
+}
+
+h4{
+    font-size: 3vw;
+    margin: 1% 0 1% 0;
+    text-align: center;
+}
+
+/*
+Contact form
+*/
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+input[type="text"], input[type="tel"], input[type="email"],input[type="url"], textarea{
+    width: 60%;
+    background-color: black;
+    border: 2px solid white;
+    color:white;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 1% 1%;
+}
+
+input[type="range"]{
+    width: 60%;
+
+}
+
+button{
+    width: 20%;
+    min-width: fit-content;
+    height: 15%;
+    background-color: black;
+    border: 1px solid white;
+    margin: 2%;
+    height: 2em;
+    font-weight: bold;
+    color:white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button[type=reset]:hover{
+    background-color: #7c0808;
+}
+
+button[type="submit"]:hover{
+    background-color: #08a109;
+}
+
+table{
+    border-spacing: 3vw;
+}
+
+.error::placeholder{
+    color: red;
+}
+
+.error{
+    border: 2px solid red !important;
+}
+
+
+
+
+
+/*
+GALLERY
+*/
+
+#gallery{
+    margin: 2%;
+    padding: 0;
+    width: 50vw;
+    height: 50vw;
+
+}
+
+#galleryheader{
+    width:fit-content;
+    background-color:transparent;
+}
+#galleryheader h1{
+    background-color: black;
+    width: fit-content;
+    padding: 2%;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+iframe{
+    width: 96vw;
+    height: 50vw;
+    margin-bottom: 2%;
+    border: 0;
+}
+
+/*
+Reszponzivitás
+*/
+
+@media all and (min-width: 600px) {
+    h1{
+        font-size:45px;
+    }
+    nav li, h3{
+        font-size: 30px;
+    }
+    h4{
+        font-size: 1em;
+    }
+    .front h3{
+        font-size: 25px;
+    }
+    .flip, .flipx{
+        flex-basis: 31.33%;
+        margin: 5% 1% 1% 1%;
+    }
+    article{
+        flex-basis: 100%;
+    }
+    #whyus{
+        flex-basis: 100%;
+        margin-top:5%;
+    }
+    #icons img{
+        height:60%;
+        width: 60%;
+    }
+}
+
+@media all and (min-width: 768px) {
+    #fel{
+        text-align: left;
+        flex: 0 0 75%; 
+    }
+    aside{
+        flex: 0 0 23%;
+        justify-content: space-between;
+    }
+
+}
