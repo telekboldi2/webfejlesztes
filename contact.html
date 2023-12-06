@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Telek Boldizsár Noel">
+    <meta name="description"
+        content="Explore Untitled: Crafting unforgettable moments through event streaming, photography, and videography since 2023.">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Untitled | Contact</title>
+    <link rel="icon" type="image/x-icon" href="images/camera_FILL0_wght400_GRAD0_opsz24_inverted.png">
+    <script src="js/script.js" defer></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myform").validate({
+                messages: {
+                    nev: "Please enter your name!",
+                    phone: "Please enter a valid phone number!",
+                    email: "Please enter a real email address",
+                },
+                errorPlacement: function (error, element) {
+                    element.attr("placeholder", error[0].outerText);
+
+                }, 
+                highlight: function (element) {
+                    $(element).addClass('error');
+                }, 
+                unhighlight: function (element) {
+                    $(element).removeClass('error');
+                }
+
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Untitled</h1>
+            <div id="logo">
+                <img id="svg" src="images/camera_FILL0_wght400_GRAD0_opsz24.svg" alt="Logo">
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <article id="form">
+            <h2>Contact form</h2>
+            <p>At the moment we only take direct orders for streaming. For photography and videography orders please get
+                in touch with us throught our social channels. Furthermore our calculator function is currently in
+                closed beta and only available for a selected few. You can still use our form to submit requests and we
+                will get back to you with a price as soon as possible.<br><span id="bold"> Thank you for understanding!
+                </span> </p>
+            <form method="post" action="http://szamtud.uni-corvinus.hu/receive.php" id="myform" novalidate>
+                <label for="nev">Name: <br><input type="text" name="nev" id="nev" placeholder="Your name..."
+                        required></label><br>
+                <label for="phone">Phone: <br><input type="tel" name="phone" id="phone"
+                        placeholder="Your phone number..." value="" minlength="10" required></label><br>
+                <label for="email">Email address:<br><input type="email" name="emai" id="email"
+                        placeholder="Your email address..." required></label><br>
+                <p>Cameras to choose from:</p>
+                <label for="a6000">
+                    <input type="checkbox" name="A6000" id="a6000">Sony &alpha;6000
+                </label><br>
+                <label for="a7iii">
+                    <input type="checkbox" name="A7iii" id="a7iii">Sony &alpha;7 III
+                </label><br>
+                <label for="a7siii">
+                    <input type="checkbox" name="A7siii" id="a7siii">Sony &alpha;7 SIII
+                </label><br>
+                <label for="fx3">
+                    <input type="checkbox" name="Fx3" id="fx3">Sony FX3
+                </label><br>
+                <label for="fx6">
+                    <input type="checkbox" name="Fx6" id="fx6">Sony FX6
+                </label><br>
+                <label for="streamdate">
+                    <p>Date of stream: </p>
+                    <input type="date" name="streamdate" id="streamdate">
+                </label>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="hourstart">
+                                Start of stream:<br>
+                                <input type="time" name="stream_start" id="hourstart"></label>
+                        </td>
+                        <td>
+                            End of stream:<br>
+                            <label for="hourend"><input type="time" name="stream_end" id="hourend"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Clothing:<br>
+                            <label for="clothing">
+                                <select name="clothing" id="clothing">
+                                    <option value="formal">Formal</option>
+                                    <option value="semi-formal">Semi-formal</option>
+                                    <option value="casual" selected>Casual</option>
+                                </select>
+                            </label>
+                        </td>
+                    </tr>
+                </table>
+                Place of stream:<br>
+                <label for="gmaps"><input type="url" name="place" id="gmaps"
+                        placeholder="Google Maps link..."></label><br>
+                <label for="longtext"><textarea name="textarea" id="longtext" cols="30" rows="10"
+                        placeholder="Description of the event"></textarea>
+                </label><br>
+                <input type="hidden" id="finalValue" name="finalValue" value="">
+                <button onclick="kill()" type="submit">Submit</button> <button type="reset">Reset</button>
+            </form>
+        </article>
+        <footer>
+            <h4>The website above is a fictional representation created solely for a university project.</h4>
+            <h4>Created by Boldizsár Noel Telek in 2023</h4>
+            <div id="icons">
+                <a href="https://youtu.be/dQw4w9WgXcQ?si=zajqQG0eVcolNK0s"><img src="images/icons8-youtube-50.png"
+                        alt="Youtube"></a>
+                <a target=”_blank” href="https://www.instagram.com/boldizsar_telek/"><img
+                        src="images/icons8-instagram-50.png" alt="Instagram"></a>
+                <a target=”_blank” href="https://www.facebook.com/"><img src="images/icons8-facebook-50.png"
+                        alt="Facebook"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
