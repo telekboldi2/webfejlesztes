@@ -20,6 +20,8 @@
                     nev: "Please enter your name!",
                     phone: "Please enter a valid phone number!",
                     email: "Please enter a real email address",
+                    place: "Link missing!",
+                    textarea: "Please give us a description for the event."
                 },
                 errorPlacement: function (error, element) {
                     element.attr("placeholder", error[0].outerText);
@@ -62,7 +64,7 @@
                 closed beta and only available for a selected few. You can still use our form to submit requests and we
                 will get back to you with a price as soon as possible.<br><span id="bold"> Thank you for understanding!
                 </span> </p>
-            <form method="post" action="http://szamtud.uni-corvinus.hu/receive.php" id="myform" novalidate>
+            <form method="post" id="myform" novalidate onsubmit="kill(); event.preventDefault();" action="http://szamtud.uni-corvinus.hu/receive.php">
                 <label for="nev">Name: <br><input type="text" name="nev" id="nev" placeholder="Your name..."
                         required></label><br>
                 <label for="phone">Phone: <br><input type="tel" name="phone" id="phone"
@@ -115,12 +117,12 @@
                 </table>
                 Place of stream:<br>
                 <label for="gmaps"><input type="url" name="place" id="gmaps"
-                        placeholder="Google Maps link..."></label><br>
+                        placeholder="Google Maps link..." required></label><br>
                 <label for="longtext"><textarea name="textarea" id="longtext" cols="30" rows="10"
-                        placeholder="Description of the event"></textarea>
+                        placeholder="Description of the event" required></textarea>
                 </label><br>
                 <input type="hidden" id="finalValue" name="finalValue" value="">
-                <button onclick="kill()" type="submit">Submit</button> <button type="reset">Reset</button>
+                <button type="submit">Submit</button> <button type="reset">Reset</button>
             </form>
         </article>
         <footer>
