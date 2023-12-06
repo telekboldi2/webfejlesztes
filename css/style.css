@@ -278,6 +278,7 @@ img{
 #defqon{
     border: 4px solid white;
     border-style:dashed dotted solid ridge;
+    width: 95%;
 }
 
 /*
@@ -333,6 +334,10 @@ input[type="text"], input[type="tel"], input[type="email"],input[type="url"], te
     margin: 1% 1%;
 }
 
+#fx6{
+    margin-bottom: 1%;
+}
+
 input[type="range"]{
     width: 60%;
 
@@ -371,7 +376,6 @@ table{
 .error{
     border: 2px solid red !important;
 }
-
 
 
 
