@@ -43,7 +43,7 @@ function kill(){
     }
     else{
         x = confirm(`The price of the stream is approximately ${final} HUF. Do you want to submit this request?`)
-        if(x){
+        if(x&&$("myform").valid()){
             return true
         }
         else{
