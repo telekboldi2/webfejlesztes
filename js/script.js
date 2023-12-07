@@ -44,7 +44,7 @@ function kill(){
     else{
         x = confirm(`The price of the stream is approximately ${final} HUF. Do you want to submit this request?`)
         if(x){
-            document.getElementById("myform").submit();
+            return true
         }
         else{
             return false
